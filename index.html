@@ -5,40 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">  
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
 <body>
-
-  Bill
-
+<header><img src="images\logo.svg" alt=""></header>
+<main>
+  <div class="calculator-card">
+    <div class="bill-wrapper">
+  <h1>Bill</h1>
+    <input class="bill" type="number" placeholder="0.0"><img src="images\icon-dollar.svg" alt=""></input>
+  </div>
+  <div class="tip-percent-wrapper">
+    <h2>  
   Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
+</h2>
+  <button>5%</button>
+  <button>10%</button>
+  <button>15%</button>
+  <button>25%</button>
+  <button>50%</button>
+ <input class="custom-percent" type="number" placeholder="Custom"/>
+</div>
+<div class="ppl-number-wrapper">
+ <h3> Number of People</h3>
+<input class="ppl-number" type="number" placeholder="0"><img src="images\icon-person.svg" alt=""></input>
+</div>
+<div class="tip-summary-card">  
+Tip Amount
   / person
 
   Total
   / person
 
   Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+</div>
+</div>
+</main>
+ 
 </body>
 </html>
