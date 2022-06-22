@@ -17,12 +17,13 @@
   <div class="calculator-card">
     <div class="bill-wrapper">
   <h1>Bill</h1>
-    <input class="bill" type="number" placeholder="0.0"><img src="images\icon-dollar.svg" alt=""></input>
+    <input class="bill" type="number" placeholder="0.0"><img src="images\icon-dollar.svg" alt="" class="dollar"></input>
   </div>
   <div class="tip-percent-wrapper">
     <h2>  
   Select Tip %
 </h2>
+
   <button>5%</button>
   <button>10%</button>
   <button>15%</button>
@@ -31,17 +32,21 @@
  <input class="custom-percent" type="number" placeholder="Custom"/>
 </div>
 <div class="ppl-number-wrapper">
- <h3> Number of People</h3>
-<input class="ppl-number" type="number" placeholder="0"><img src="images\icon-person.svg" alt=""></input>
+<h3> Number of People</h3>
+
+<input class="ppl-number" type="number" placeholder="0"><img src="images\icon-person.svg" alt="" class="person"></input>
 </div>
 <div class="tip-summary-card">  
-Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
+<div class="tip-amount-wrapper">
+  <p class="results">Tip Amount
+  <span>/ person</span></p></div>
+  <p class="tip-total-wrapper-result">$0.0</p>
+<div class="total-wrapper">
+  <p class="results">Total
+    <span>/ person</span></p>
+    <p class="total-wrapper-result">$0.0</p>
+  </div>
+  <button class="reset">Reset</button>
 </div>
 </div>
 </main>

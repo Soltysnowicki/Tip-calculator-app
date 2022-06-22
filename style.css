@@ -22,6 +22,7 @@ body {
   flex-flow: column;
   align-items: center;
 }
+
 header {
   margin-top: 2rem;
 }
@@ -31,11 +32,118 @@ header {
   border-radius: 2rem 2rem 0rem 0rem;
   height: 100vh;
   width: 100vw;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 h1 {
-  margin-left: 2rem;
   padding-top: 2rem;
+  font: inherit;
 }
 .bill {
-  margin-left: 2rem;
+  margin-top: 0.5rem;
+  width: 19rem;
+  height: 3rem;
+  padding: 0.5rem 1rem 0rem 0rem;
+  border-radius: 0.3rem;
+  border: none;
+  background-color: var(--very-light-grayish-cyan);
+  text-align: right;
+  font: inherit;
+}
+.bill::placeholder {
+  font-size: 1.5rem;
+}
+.dollar {
+  position: relative;
+  transform: translate(-2700%, 0%);
+}
+h2 {
+  padding-top: 0.5rem;
+  padding-right: 5rem;
+  font: inherit;
+}
+.tip-percent-wrapper {
+  padding-top: 0.5rem;
+  width: 20.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+}
+.tip-percent-wrapper button {
+  width: 9.125rem;
+  height: 3rem;
+  font: inherit;
+  font-size: 1.2rem;
+  color: white;
+  background-color: var(--very-dark-cyan);
+  border: none;
+}
+.tip-percent-wrapper button:hover {
+  background-color: var(--strong-cyan);
+  color: black;
+}
+.tip-percent-wrapper input {
+  width: 8.5rem;
+  height: 3rem;
+  padding-right: 0.625rem;
+  font: inherit;
+  font-size: 1.2rem;
+  background-color: var(--very-light-grayish-cyan);
+  border: none;
+  text-align: right;
+}
+h3 {
+  padding-top: 0.5rem;
+  font: inherit;
+}
+.ppl-number {
+  margin-top: 0.5rem;
+
+  width: 19rem;
+  height: 3rem;
+  padding: 0.5rem 1rem 0rem 0rem;
+  border-radius: 0.3rem;
+  border: none;
+  background-color: var(--very-light-grayish-cyan);
+  text-align: right;
+  font: inherit;
+}
+.ppl-number::placeholder {
+  font-size: 1.5rem;
+}
+.person {
+  position: relative;
+  transform: translate(-2300%, 0%);
+}
+.tip-summary-card {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 2rem;
+  width: 20.5rem;
+  height: 16rem;
+  background-color: var(--very-dark-cyan);
+}
+.tip-summary-card button {
+  width: 9.125rem;
+  height: 3rem;
+  font: inherit;
+  font-size: 1.2rem;
+  color: white;
+  background-color: var(--very-dark-cyan);
+  border: none;
+}
+.tip-summary-card button:hover {
+  background-color: var(--strong-cyan);
+  color: black;
+}
+.results {
+  width: 100px;
+}
+.tip-amount-wrapper {
+  width: 17.5rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
 }
