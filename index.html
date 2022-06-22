@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Tip calculator app</title>
 
-
+  <script src="script.js" defer></script>
 </head>
 <body>
 <header><img src="images\logo.svg" alt=""></header>
@@ -24,11 +24,11 @@
   Select Tip %
 </h2>
 
-  <button>5%</button>
-  <button>10%</button>
-  <button>15%</button>
-  <button>25%</button>
-  <button>50%</button>
+  <button class="tip-percentage active">5%</button>
+  <button class="tip-percentage">10%</button>
+  <button class="tip-percentage">15%</button>
+  <button class="tip-percentage">25%</button>
+  <button class="tip-percentage">50%</button>
  <input class="custom-percent" type="number" placeholder="Custom"/>
 </div>
 <div class="ppl-number-wrapper">
@@ -39,9 +39,10 @@
 <div class="tip-summary-card">  
 <div class="tip-amount-wrapper">
   <p class="results">Tip Amount
-  <span>/ person</span></p></div>
-  <p class="tip-total-wrapper-result">$0.0</p>
-<div class="total-wrapper">
+  <span>/ person</span></p>
+  <p class="tip-total-result">$0.0</p>
+</div>
+  <div class="total-wrapper">
   <p class="results">Total
     <span>/ person</span></p>
     <p class="total-wrapper-result">$0.0</p>

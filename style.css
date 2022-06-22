@@ -60,7 +60,7 @@ h1 {
 }
 h2 {
   padding-top: 0.5rem;
-  padding-right: 5rem;
+  padding-right: 8rem;
   font: inherit;
 }
 .tip-percent-wrapper {
@@ -70,6 +70,11 @@ h2 {
   flex-flow: row wrap;
   gap: 0.5rem;
 }
+.active {
+  background-color: var(--strong-cyan) !important;
+  color: black !important;
+}
+
 .tip-percent-wrapper button {
   width: 9.125rem;
   height: 3rem;
@@ -82,7 +87,9 @@ h2 {
 .tip-percent-wrapper button:hover {
   background-color: var(--strong-cyan);
   color: black;
+  cursor: pointer;
 }
+
 .tip-percent-wrapper input {
   width: 8.5rem;
   height: 3rem;
@@ -99,7 +106,6 @@ h3 {
 }
 .ppl-number {
   margin-top: 0.5rem;
-
   width: 19rem;
   height: 3rem;
   padding: 0.5rem 1rem 0rem 0rem;
@@ -131,19 +137,33 @@ h3 {
   font: inherit;
   font-size: 1.2rem;
   color: white;
-  background-color: var(--very-dark-cyan);
+  background-color: var(--strong-cyan);
   border: none;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .tip-summary-card button:hover {
   background-color: var(--strong-cyan);
   color: black;
+  cursor: pointer;
 }
 .results {
-  width: 100px;
+  width: 80px;
 }
 .tip-amount-wrapper {
   width: 17.5rem;
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;
+}
+.total-wrapper {
+  width: 17.5rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.active {
+  background-color: var(--strong-cyan);
+  color: black;
 }
