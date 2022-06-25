@@ -69,10 +69,12 @@ function pplInputHandler() {
 
 //result calculation functions
 function tip_amount_p_person_calc() {
-  if (ppl_number.value <= 0 && bill_amount.value <= 0) {
+  if (ppl_number.value === "0" || bill_amount.value === "0") {
     tip_total_result.innerHTML = "$ " + (0.0).toFixed(1);
     amount_total_result.innerHTML = "$ " + (0.0).toFixed(1);
+    console.log("why?");
   } else {
+    console.log("ke");
     tip_amount_p_person =
       (bill_amount.value * tip_percentage) / ppl_number.value;
     tip_total_result.innerHTML = "$" + tip_amount_p_person.toFixed(2);
@@ -82,10 +84,12 @@ function tip_amount_p_person_calc() {
 }
 
 //reset button
-reset_button.addEventListener("click", reset());
+reset_button.addEventListener("click", reset);
 function reset() {
   bill_amount.value = 0.0;
   ppl_number.value = 0.0;
+  tip_total_result.innerHTML = "$ " + (0.0).toFixed(1);
+  amount_total_result.innerHTML = "$ " + (0.0).toFixed(1);
 }
 
 // 1. x * tip / ppl

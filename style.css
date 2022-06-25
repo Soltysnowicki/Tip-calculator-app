@@ -30,7 +30,7 @@ header {
   background-color: var(--white);
   margin-top: 3rem;
   border-radius: 2rem 2rem 0rem 0rem;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   display: flex;
   flex-flow: column;
@@ -50,6 +50,7 @@ h1 {
   background-color: var(--very-light-grayish-cyan);
   text-align: right;
   font: inherit;
+  font-size: 1.5rem;
 }
 .bill::placeholder {
   font-size: 1.5rem;
@@ -114,6 +115,7 @@ h3 {
   background-color: var(--very-light-grayish-cyan);
   text-align: right;
   font: inherit;
+  font-size: 1.5rem;
 }
 .ppl-number::placeholder {
   font-size: 1.5rem;
@@ -127,9 +129,9 @@ h3 {
   flex-flow: column;
   align-items: center;
   margin-top: 2rem;
-  width: 19rem;
-  border-radius: 0.3rem;
-  height: 16rem;
+  width: 20rem;
+  border-radius: 1rem;
+
   background-color: var(--very-dark-cyan);
 }
 .tip-summary-card button {
@@ -149,7 +151,12 @@ h3 {
   cursor: pointer;
 }
 .results {
-  width: 80px;
+  max-width: 7rem;
+  margin-left: 1rem;
+  color: white;
+}
+.results span {
+  opacity: 0.3;
 }
 .tip-amount-wrapper {
   width: 17.5rem;
@@ -157,6 +164,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--strong-cyan);`
 }
 .total-wrapper {
   width: 17.5rem;
@@ -164,6 +172,13 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--strong-cyan);
+}
+.tip-total-result{
+  font-size: 1.5rem;
+}
+.total-wrapper-result{
+  font-size: 1.5rem;
 }
 
 .active {
