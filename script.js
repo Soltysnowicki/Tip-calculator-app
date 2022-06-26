@@ -35,8 +35,9 @@ function handleClick(event) {
   tip_percentage = event.target.textContent.replace(/%/, "") * 0.01;
 
   console.log(tip_percentage);
-  billInputHandler();
+
   tip_amount_p_person_calc();
+  custom_btn.value = 0.0;
 }
 
 //custom button handler
@@ -78,7 +79,8 @@ function tip_amount_p_person_calc() {
     tip_amount_p_person =
       (bill_amount.value * tip_percentage) / ppl_number.value;
     tip_total_result.innerHTML = "$" + tip_amount_p_person.toFixed(2);
-    amount_total_p_person = parseFloat(bill_amount.value) + tip_amount_p_person;
+    amount_total_p_person =
+      parseFloat(bill_amount.value) / ppl_number.value + tip_amount_p_person;
     amount_total_result.innerHTML = "$" + amount_total_p_person.toFixed(2);
   }
 }
@@ -88,6 +90,7 @@ reset_button.addEventListener("click", reset);
 function reset() {
   bill_amount.value = 0.0;
   ppl_number.value = 0.0;
+  custom_btn.value = 0.0;
   tip_total_result.innerHTML = "$ " + (0.0).toFixed(1);
   amount_total_result.innerHTML = "$ " + (0.0).toFixed(1);
 }

@@ -1,3 +1,4 @@
+/*color vairables*/
 :root {
   --strong-cyan: hsl(172, 67%, 45%);
   --very-dark-cyan: hsl(183, 100%, 15%);
@@ -7,10 +8,12 @@
   --very-light-grayish-cyan: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
 }
+/*margin & padding reset*/
 * {
   margin: 0;
   padding: 0;
 }
+/*body formatting*/
 body {
   font-family: "Space Mono";
   font-size: 16px;
@@ -22,10 +25,11 @@ body {
   flex-flow: column;
   align-items: center;
 }
-
+/*logo*/
 header {
   margin-top: 2rem;
 }
+/*card formatting and content*/
 .calculator-card {
   background-color: var(--white);
   margin-top: 3rem;
@@ -40,6 +44,7 @@ h1 {
   padding-top: 2rem;
   font: inherit;
 }
+/*bill input formatting*/
 .bill {
   margin-top: 0.5rem;
   width: 19rem;
@@ -59,6 +64,7 @@ h1 {
   position: relative;
   transform: translate(-2700%, 0%);
 }
+/*tip percent section formatting*/
 h2 {
   padding-top: 0.5rem;
   padding-right: 8rem;
@@ -84,13 +90,14 @@ h2 {
   color: white;
   background-color: var(--very-dark-cyan);
   border: none;
+  border-radius: 0.3rem;
 }
 .tip-percent-wrapper button:hover {
   background-color: var(--strong-cyan);
   color: black;
   cursor: pointer;
 }
-
+/*custom tip percentage input*/
 .tip-percent-wrapper input {
   width: 8.5rem;
   height: 3rem;
@@ -100,11 +107,14 @@ h2 {
   background-color: var(--very-light-grayish-cyan);
   border: none;
   text-align: right;
+  border-radius: 0.3rem;
 }
 h3 {
   padding-top: 0.5rem;
   font: inherit;
 }
+
+/*number of people input formatting*/
 .ppl-number {
   margin-top: 0.5rem;
   width: 19rem;
@@ -124,6 +134,7 @@ h3 {
   position: relative;
   transform: translate(-2300%, 0%);
 }
+/*results card formatting*/
 .tip-summary-card {
   display: flex;
   flex-flow: column;
@@ -135,19 +146,20 @@ h3 {
   background-color: var(--very-dark-cyan);
 }
 .tip-summary-card button {
-  width: 9.125rem;
+  width: 17rem;
   height: 3rem;
   font: inherit;
   font-size: 1.2rem;
-  color: white;
+  color: black;
   background-color: var(--strong-cyan);
   border: none;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  border-radius: 0.3rem;;
 }
 .tip-summary-card button:hover {
   background-color: var(--strong-cyan);
-  color: black;
+  opacity: 0.7;
   cursor: pointer;
 }
 .results {
@@ -180,8 +192,126 @@ h3 {
 .total-wrapper-result{
   font-size: 1.5rem;
 }
-
+/*active state formatting*/
 .active {
   background-color: var(--strong-cyan);
   color: black;
+}
+
+@media only screen and (min-width: 700px){
+  /*body formatting*/
+
+/*logo*/
+header {
+  margin-top: 4rem;
+}
+/*card formatting and content*/
+.calculator-card {
+  margin-top: 4rem;
+  border-radius: 2rem;
+  max-height: 30rem;
+  max-width: 55rem;
+  flex-flow: row;
+  justify-content: space-around;
+}
+h1 {
+  padding-top: 0rem;
+}
+.left-part{
+  margin-left: 1rem;
+}
+/*bill input formatting*/
+.bill {
+  margin-top: 0.5rem;
+  width: 22rem;
+  height: 2.5rem;
+  
+}
+
+.dollar {
+  
+  transform: translate(-3200%, -20%);                                                 00%, -20%);
+}
+/*tip percent section formatting*/
+h2 {
+  padding-top: 0.5rem;
+  padding-right: 15rem;
+
+}
+.tip-percent-wrapper {
+  padding-top: 0.5rem;
+  width: 23rem;
+  
+  gap: 0.5rem;
+}
+.active {
+  background-color: var(--strong-cyan) !important;
+  color: black !important;
+}
+
+.tip-percent-wrapper button {
+  width: 7.3rem;
+  height: 3.3rem;
+  
+}
+
+/*custom tip percentage input*/
+.tip-percent-wrapper input {
+  width: 6.7rem;
+  height: 3.3rem;
+  padding-right: 0.625rem;
+ 
+}
+
+
+/*number of people input formatting*/
+.ppl-number {
+  width: 22rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+}
+
+.person {
+  position: relative;
+  transform: translate(-2700%, -20%);
+}
+/*results card formatting*/
+.tip-summary-card {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 0rem;
+  width: 40%;
+  height: 90%;
+}
+.tip-summary-card button {
+  width: 80%;
+  height: 3rem;
+  margin-top: 5rem;
+}
+
+.results {
+  max-width: 7rem;
+  margin-left: 0rem;
+}
+
+.tip-amount-wrapper {
+  max-width: 20rem;
+  
+}
+.total-wrapper {
+  max-width: 20rem;
+  
+}
+.tip-total-result{
+  font-size: 2rem;
+}
+.total-wrapper-result{
+  font-size: 2rem;
+}
+/*active state formatting*/
+.active {
+  background-color: var(--strong-cyan);
+  color: black;
+}
 }
