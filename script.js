@@ -5,6 +5,7 @@ const custom_btn = document.querySelector(".custom-percent");
 const reset_button = document.querySelector(".reset");
 const tip_total_result = document.querySelector(".tip-total-result");
 const amount_total_result = document.querySelector(".total-wrapper-result");
+const error_message = document.querySelector(".error-message");
 let tip_percentage = 0.0;
 let total_amount = 0.0;
 let amount_total_p_person = 0.0;
@@ -33,9 +34,6 @@ function handleClick(event) {
   });
   event.target.classList.add("active");
   tip_percentage = event.target.textContent.replace(/%/, "") * 0.01;
-
-  console.log(tip_percentage);
-
   tip_amount_p_person_calc();
   custom_btn.value = 0.0;
 }
@@ -68,20 +66,22 @@ function pplInputHandler() {
   }
 }
 
-//result calculation functions
+//result calculation function
 function tip_amount_p_person_calc() {
   if (ppl_number.value === "0" || bill_amount.value === "0") {
     tip_total_result.innerHTML = "$ " + (0.0).toFixed(1);
     amount_total_result.innerHTML = "$ " + (0.0).toFixed(1);
-    console.log("why?");
+    error_message.classList.remove("hide");
+    ppl_number.classList.add("border-changer");
   } else {
-    console.log("ke");
     tip_amount_p_person =
       (bill_amount.value * tip_percentage) / ppl_number.value;
     tip_total_result.innerHTML = "$" + tip_amount_p_person.toFixed(2);
     amount_total_p_person =
       parseFloat(bill_amount.value) / ppl_number.value + tip_amount_p_person;
     amount_total_result.innerHTML = "$" + amount_total_p_person.toFixed(2);
+    error_message.classList.add("hide");
+    ppl_number.classList.remove("border-changer");
   }
 }
 
@@ -94,6 +94,3 @@ function reset() {
   tip_total_result.innerHTML = "$ " + (0.0).toFixed(1);
   amount_total_result.innerHTML = "$ " + (0.0).toFixed(1);
 }
-
-// 1. x * tip / ppl
-// 2. x + x*tip /ppl

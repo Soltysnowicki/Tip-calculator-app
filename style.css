@@ -198,6 +198,20 @@ h3 {
   color: black;
 }
 
+/*error-message handler*/
+.border-changer{
+  border: 0.5px solid red;
+}
+.error-message{
+  position: relative;
+  left: 10%;
+  color: red;
+  opacity: 0.7;
+}
+.hide{
+  display: none;
+}
+
 @media only screen and (min-width: 700px){
   /*body formatting*/
 
@@ -230,7 +244,7 @@ h1 {
 
 .dollar {
   
-  transform: translate(-3200%, -20%);                                                 00%, -20%);
+  transform: translate(-3200%, -20%);
 }
 /*tip percent section formatting*/
 h2 {
@@ -314,4 +328,10 @@ h2 {
   background-color: var(--strong-cyan);
   color: black;
 }
+/*error-message handler*/
+
+.error-message{
+  left: 20%;
+}
+
 }
